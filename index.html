@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password genie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon"> <!-- repensar icon-->
+</head>
+<body style="background-image: url('/images/background-passgenie.png'); background-size: contain;
+        background-position: center;"> <!-- Background Image -->
+    <img class="clouds" src="/images/clouds-passgenie.png"> <!-- Clouds -->
+    <div class="stars"> <!-- Shooting Stars -->
+        <div class="star-one"></div>
+        <div class="star-two"></div>
+        <div class="star-three"></div>
+        <div class="star-four"></div>
+        <div class="star-five"></div>
+    </div>
+    <!--====================================-->
+    <!--            MAIN CONTENT            -->
+    <!--====================================-->
+    <section>
+        <div class="header" style="text-align: center; color: white;">password<br>genie.</div>
+        <div class="container" style="background-color: white;">
+            <div class="textField">your password<br></div>
+            <div class="buttons">
+                <input type="button" value="generate" onclick="generate()">
+                <input type="button" value="copy" onclick="copy()">
+            </div>
+            <div class="checkboxes">
+                <p><input type="checkbox" id="uppercase" onclick="updateChar()" checked>uppercase</p>
+                <p><input type="checkbox" id="lowercase" onclick="updateChar()" checked>lowercase</p>
+                <p><input type="checkbox" id="numbers" onclick="updateChar()">numbers</p>
+                <p><input type="checkbox" id="special" onclick="updateChar()">special characters</p>
+            </div>
+            <div class="sizeContainer">
+                <p>password size:<br><input id="size" type="number" value="0" min="0" max="50"></p>
+                <div class="arrowsContainer">
+                    <button class="arrow up" onclick="up()">▲</button>
+                    <button class="arrow down" onclick="down()">▼</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

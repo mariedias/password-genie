@@ -1,0 +1,118 @@
+/* Posição das estrelas */
+.star-one,
+.star-two,
+.star-three,
+.star-four,
+.star-five {
+    position: absolute;
+    width: 1.8px;
+    height: 1.8px;
+    background-color: rgb(254, 255, 219);
+    border-radius: 50px;
+    z-index: -1;
+    animation: shooting-star 1s ease-in-out infinite, pause 10s step-end infinite;
+    animation-delay: 5s;
+}
+
+/* Posição específica de cada estrela */
+.star-one {
+    margin-top: 5%;
+    margin-left: 70%;
+}
+
+.star-two {
+    margin-top: 60%;
+    margin-left: 5%;
+}
+
+.star-three {
+    margin-top: 1%;
+    margin-left: 8%;
+}
+
+.star-four {
+    margin-top: 30%;
+    margin-left: 5%;
+}
+
+.star-five {
+    margin-top: 50%;
+    margin-left: 80%;
+}
+
+/* Animação da estrela */
+@keyframes shooting-star {
+    0% {
+        rotate: 60deg;
+        background-color: rgba(254, 255, 219, 0.8);
+    }
+    25% {
+        transform: translate(-100%, 50%);
+        width: 1.5px;
+        height: 10px;
+        border-radius: 0px;
+        background-color: rgba(254, 255, 219, 0.6);
+    }
+    50% {
+        transform: translate(-150%, 100%);
+        width: 1px;
+        height: 20px;
+        border-radius: 0px;
+        background-color: rgba(254, 255, 219, 0.4);
+    }
+    75% {
+        transform: translate(-200%, 150%);
+        width: 0.5px;
+        height: 30px;
+        border-radius: 0px;
+        background-color: rgba(254, 255, 219, 0.2);
+    }
+    90% {
+        transform: translate(-250%, 200%);
+        width: 0.25px;
+        height: 45px;
+        border-radius: 0px;
+        background-color: rgba(254, 255, 219, 0.15);
+    }
+    100% {
+        transform: translate(-600%, 550%);
+        width: 0.25px;
+        height: 10px;
+        border-radius: 0px;
+        background-color: rgba(254, 255, 219, 0.1);
+        rotate: 50deg;
+    }
+}
+
+/* Animação de pausa */
+@keyframes pause {
+    0%, 9% {
+        visibility: visible;
+    }
+    10%, 100% {
+        visibility: hidden;
+    }
+}
+
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura suficiente para a ilusão de movimento */
+    height: 100%;
+    scale: 105%;
+    background-size: cover;
+    z-index: -2;
+    animation: move-clouds 30s linear infinite backwards;
+}
+
+@keyframes move-clouds {
+    0%, 100% {
+        transform: translateX(-1%);
+        
+    }
+    50% {
+        transform: translateX(1%);
+    }
+}
+
